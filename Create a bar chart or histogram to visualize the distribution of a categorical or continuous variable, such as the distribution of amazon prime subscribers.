@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(0)
+data = {'Subscription Length (months)': np.random.randint(1, 36, 1000)}
+
+df = pd.DataFrame(data)
+
+plt.figure(figsize=(8, 6))
+plt.hist(df['Subscription Length (months)'], bins=12, edgecolor='black')
+plt.xlabel('Subscription Length (months)')
+plt.ylabel('Frequency')
+plt.title('Distribution of Amazon Prime Subscription Lengths')
+plt.show()
